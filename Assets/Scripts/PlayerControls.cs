@@ -7,14 +7,10 @@ public class PlayerControls : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
     public Transform groundCheck;
-    //public Transform startPosition;
     public float groundCheckRadius;
     public LayerMask whatIsGround;
     private bool onGround;
-    private bool Running; //to understand if the player is running
     public int ScreenTap; //to understand how many times user tapped a screen
-
-    public GameObject TapIcon;
     
     void Start()
     {
@@ -28,24 +24,17 @@ public class PlayerControls : MonoBehaviour
         animator.SetBool("OnGround", onGround);
         animator.SetFloat("Speed", rb.velocity.y);
 
-        FirstTap();
         RunningFunc();
-        JumpFunc();
     }
 
-    void FirstTap()
+    public void JumpFunc()
     {
-        if (Input.GetMouseButtonDown(0) && ScreenTap == 0)
+        if(ScreenTap == 0) //player making a first tap
         {
-            Destroy(TapIcon);
             ScreenTap++;
-            rb.velocity = new Vector2(rb.velocity.x, 2);         
+            rb.velocity = new Vector2(rb.velocity.x, 5);
         }
-    }
-
-    void JumpFunc()
-    {
-        if (Input.GetMouseButtonDown(0) && onGround && ScreenTap >= 1)
+        else if (onGround && ScreenTap >= 1)
         {
             ScreenTap++;
             rb.velocity = new Vector2(rb.velocity.x, 5);
