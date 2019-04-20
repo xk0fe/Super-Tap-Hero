@@ -11,6 +11,10 @@ public class PlayerControls : MonoBehaviour
     public float groundCheckRadius;
     public LayerMask whatIsGround;
     private bool onGround;
+    private bool Running; //to understand if the player is running
+    public int ScreenTap; //to understand how many times user tapped a screen
+
+    public GameObject TapIcon;
     
     void Start()
     {
@@ -19,14 +23,40 @@ public class PlayerControls : MonoBehaviour
     
     void Update()
     {
-        rb.velocity = new Vector2(3, rb.velocity.y);
         onGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
 
         animator.SetBool("OnGround", onGround);
+        animator.SetFloat("Speed", rb.velocity.y);
 
-        if (Input.GetMouseButtonDown(0) && onGround)
+        FirstTap();
+        RunningFunc();
+        JumpFunc();
+    }
+
+    void FirstTap()
+    {
+        if (Input.GetMouseButtonDown(0) && ScreenTap == 0)
         {
+            Destroy(TapIcon);
+            ScreenTap++;
+            rb.velocity = new Vector2(rb.velocity.x, 2);         
+        }
+    }
+
+    void JumpFunc()
+    {
+        if (Input.GetMouseButtonDown(0) && onGround && ScreenTap >= 1)
+        {
+            ScreenTap++;
             rb.velocity = new Vector2(rb.velocity.x, 5);
+        }
+    }
+
+    void RunningFunc()
+    {
+        if (ScreenTap >= 1)
+        {
+            rb.velocity = new Vector2(3, rb.velocity.y);
         }
     }
 }
