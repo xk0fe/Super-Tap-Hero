@@ -11,7 +11,7 @@ public class PlayerControls : MonoBehaviour
     public LayerMask whatIsGround;
     private bool onGround;
     public int ScreenTap; //to understand how many times user tapped a screen
-    
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();

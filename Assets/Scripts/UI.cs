@@ -12,11 +12,6 @@ public class UI : MonoBehaviour
 
     public PlayerControls parent; //linking PlayerControls.cs - setup
 
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
         ScreenTap = parent.ScreenTap; //linking process
