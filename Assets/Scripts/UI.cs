@@ -7,16 +7,12 @@ public class UI : MonoBehaviour
 {
     public GameObject RepeatButton;
     public GameObject TapButton;
-
-    public int ScreenTap;
-
-    public PlayerControls parent; //linking PlayerControls.cs - setup
+    
 
     void Update()
     {
-        ScreenTap = parent.ScreenTap; //linking process
 
-        if (ScreenTap == 0)
+        if (PlayerControls.ScreenTap == 0)
         {
             RepeatButton.SetActive(false);
             TapButton.SetActive(true);
@@ -30,6 +26,15 @@ public class UI : MonoBehaviour
 
     public void RepeatButtonFunc()
     {
+        ResetLevelVariables();
         SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
+    }
+
+    public void ResetLevelVariables()
+    {
+        PlayerControls.ScreenTap = 0;
+        PlayerControls.CoinCollected1 = false;
+        PlayerControls.CoinCollected2 = false;
+        PlayerControls.CoinCollected3 = false;
     }
 }

@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerControls : MonoBehaviour
+public class PlayerControls : Move
 {
-    public Rigidbody2D rb;
     public Animator animator;
 
     public Transform groundCheck;
@@ -12,7 +11,7 @@ public class PlayerControls : MonoBehaviour
     public LayerMask whatIsGround;
     private bool onGround;
 
-    public int ScreenTap; //to understand how many times user tapped a screen
+    public static int ScreenTap; //to understand how many times user tapped a screen
 
     public static bool CoinCollected1, CoinCollected2, CoinCollected3; //check if coin is collected
 
@@ -20,15 +19,22 @@ public class PlayerControls : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
     }
-    
+
     void Update()
     {
         onGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
 
-        animator.SetBool("OnGround", onGround);
         animator.SetFloat("Speed", rb.velocity.y);
-
+        animator.SetBool("OnGround", onGround);
         RunningFunc();
+    }
+
+    void RunningFunc()
+    {
+        if (ScreenTap >= 1)
+        {
+            MoveRight(); //Move.cs
+        }
     }
 
     public void JumpFunc()
@@ -45,13 +51,6 @@ public class PlayerControls : MonoBehaviour
         }
     }
 
-    void RunningFunc()
-    {
-        if (ScreenTap >= 1)
-        {
-            rb.velocity = new Vector2(3, rb.velocity.y);
-        }
-    }
 
     void OnTriggerEnter2D(Collider2D other) //every coin has it own tag because is it easier to use individual tags instead of a proper code in a small game
     {
