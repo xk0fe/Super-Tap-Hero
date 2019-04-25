@@ -12,12 +12,12 @@ public class UI : MonoBehaviour
     void Update()
     {
 
-        if (PlayerControls.ScreenTap == 0)
+        if (PlayerControls.ScreenTap == 0) //show TAP icon if player has not tapped
         {
             RepeatButton.SetActive(false);
             TapButton.SetActive(true);
         }
-        else
+        else //hide TAP icon if player has tapped
         {
             RepeatButton.SetActive(true);
             TapButton.SetActive(false);

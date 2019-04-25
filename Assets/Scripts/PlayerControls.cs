@@ -42,12 +42,12 @@ public class PlayerControls : Move
         if(ScreenTap == 0) //player making a first tap
         {
             ScreenTap++;
-            rb.velocity = new Vector2(rb.velocity.x, 5); //jumping
+            JumpHigh(); //Move.cs
         }
         else if (onGround && ScreenTap >= 1) //all other taps
         {
             ScreenTap++;
-            rb.velocity = new Vector2(rb.velocity.x, 5); //jumping
+            JumpHigh(); //Move.cs
         }
     }
 
