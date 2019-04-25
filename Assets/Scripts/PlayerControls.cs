@@ -6,11 +6,15 @@ public class PlayerControls : MonoBehaviour
 {
     public Rigidbody2D rb;
     public Animator animator;
+
     public Transform groundCheck;
     public float groundCheckRadius;
     public LayerMask whatIsGround;
     private bool onGround;
+
     public int ScreenTap; //to understand how many times user tapped a screen
+
+    public bool CoinCollected1, CoinCollected2, CoinCollected3; //check if coin is collected (parent)
 
     void Start()
     {
@@ -32,12 +36,12 @@ public class PlayerControls : MonoBehaviour
         if(ScreenTap == 0) //player making a first tap
         {
             ScreenTap++;
-            rb.velocity = new Vector2(rb.velocity.x, 5);
+            rb.velocity = new Vector2(rb.velocity.x, 5); //jumping
         }
-        else if (onGround && ScreenTap >= 1)
+        else if (onGround && ScreenTap >= 1) //all other taps
         {
             ScreenTap++;
-            rb.velocity = new Vector2(rb.velocity.x, 5);
+            rb.velocity = new Vector2(rb.velocity.x, 5); //jumping
         }
     }
 
@@ -46,6 +50,25 @@ public class PlayerControls : MonoBehaviour
         if (ScreenTap >= 1)
         {
             rb.velocity = new Vector2(3, rb.velocity.y);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other) //every coin has it own tag because is it easier to use individual tags instead of a proper code in a small game
+    {
+        if (other.gameObject.tag == "Coin1")
+        {
+            CoinCollected1 = true;
+            other.gameObject.SetActive(false);
+        }
+        if (other.gameObject.tag == "Coin2")
+        {
+            CoinCollected2 = true;
+            other.gameObject.SetActive(false);
+        }
+        if (other.gameObject.tag == "Coin3")
+        {
+            CoinCollected3 = true;
+            other.gameObject.SetActive(false);
         }
     }
 }
