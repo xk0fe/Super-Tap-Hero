@@ -14,7 +14,7 @@ public class PlayerControls : MonoBehaviour
 
     public int ScreenTap; //to understand how many times user tapped a screen
 
-    public bool CoinCollected1, CoinCollected2, CoinCollected3; //check if coin is collected (parent)
+    public static bool CoinCollected1, CoinCollected2, CoinCollected3; //check if coin is collected
 
     void Start()
     {
