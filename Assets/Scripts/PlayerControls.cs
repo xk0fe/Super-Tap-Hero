@@ -11,16 +11,14 @@ public class PlayerControls : Move
     public LayerMask whatIsGround;
     private bool onGround;
 
-    public static int ScreenTap; //to understand how many times user tapped a screen
-
-    public static bool CoinCollected1, CoinCollected2, CoinCollected3; //check if coin is collected
+    
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         onGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
 
@@ -31,7 +29,7 @@ public class PlayerControls : Move
 
     void RunningFunc()
     {
-        if (ScreenTap >= 1)
+        if (DeusEx.ScreenTap >= 1)
         {
             MoveRight(); //Move.cs
         }
@@ -39,34 +37,34 @@ public class PlayerControls : Move
 
     public void JumpFunc()
     {
-        if(ScreenTap == 0) //player making a first tap
+        if(DeusEx.ScreenTap == 0) //player making a first tap
         {
-            ScreenTap++;
+            DeusEx.ScreenTap++;
             JumpHigh(); //Move.cs
         }
-        else if (onGround && ScreenTap >= 1) //all other taps
+        else if (onGround && DeusEx.ScreenTap >= 1) //all other taps
         {
-            ScreenTap++;
+            DeusEx.ScreenTap++;
             JumpHigh(); //Move.cs
         }
     }
 
 
-    void OnTriggerEnter2D(Collider2D other) //every coin has it own tag because is it easier to use individual tags instead of a proper code in a small game
+    void OnTriggerEnter2D(Collider2D other) //every star has it own tag because is it easier to use individual tags instead of a proper code in a small game
     {
-        if (other.gameObject.tag == "Coin1")
+        if (other.gameObject.tag == "Star1")
         {
-            CoinCollected1 = true;
+            DeusEx.StarCollected1 = true;
             other.gameObject.SetActive(false);
         }
-        if (other.gameObject.tag == "Coin2")
+        if (other.gameObject.tag == "Star2")
         {
-            CoinCollected2 = true;
+            DeusEx.StarCollected2 = true;
             other.gameObject.SetActive(false);
         }
-        if (other.gameObject.tag == "Coin3")
+        if (other.gameObject.tag == "Star3")
         {
-            CoinCollected3 = true;
+            DeusEx.StarCollected3 = true;
             other.gameObject.SetActive(false);
         }
     }

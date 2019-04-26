@@ -5,8 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Coin1
-  - Coin2
-  - Coin3
+  - Star1
+  - Star2
+  - Star3
   layers:
   - Default
   - TransparentFX
@@ -16,9 +17,9 @@ TagManager:
   - UI
   - 
   - 
-  - ground
-  - 
-  - 
+  - Ground
+  - Collectable
+  - Player
   - 
   - 
   - 

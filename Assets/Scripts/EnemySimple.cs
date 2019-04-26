@@ -11,7 +11,7 @@ public class EnemySimple : Move
     public LayerMask whatIsGround;
     private bool onGround;
 
-    public GameObject Canvas;
+    public GameObject MainObject;
     public GameObject Player;
 
     public static int ScreenTap; //to understand how many times user tapped a screen
@@ -36,9 +36,7 @@ public class EnemySimple : Move
     {
         if (collision.gameObject.tag == "Player")
         {
-            Canvas.GetComponent<UI>().RepeatButtonFunc();
-            //Destroy(Player);
-            //Player.SetActive(false);
+            MainObject.GetComponent<DeusEx>().RepeatButtonFunc();
         }
     }
 
