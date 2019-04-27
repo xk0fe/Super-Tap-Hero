@@ -8,6 +8,7 @@ public class LevelUI : MonoBehaviour
     public GameObject RepeatButton;
     public GameObject TapIcon;
     public Text LevelCoinCountText;
+    public Text LevelCompleteCoinCountText;
     public SceneBoss parent;
 
     void Start()
@@ -18,7 +19,8 @@ public class LevelUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        LevelCoinCountText.text = parent.LevelCoinCount.ToString();
+        LevelCoinCountText.text = parent.LevelCoinCount.ToString(); //showing coin count while playing
+        LevelCompleteCoinCountText.text = parent.LevelCoinCount.ToString(); //showing coin coint count on a "level complete" screen
 
         if (SceneBoss.ScreenTap == 0) //show TAP icon if player has not tapped
         {

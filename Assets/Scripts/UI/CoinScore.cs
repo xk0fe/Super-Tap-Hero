@@ -18,7 +18,7 @@ public class CoinScore : MonoBehaviour
         
     }
 
-    void OnTriggerEnter2D(Collider2D other) //every star has it own tag because is it easier to use individual tags instead of a proper code in a small game
+    void OnTriggerEnter2D(Collider2D other) //every coin has it own tag because is it easier to use individual tags instead of a proper code in a small game
     {
         if (other.gameObject.tag == "Player")
         {

@@ -7,7 +7,7 @@ public class PauseMenu : MonoBehaviour
 {
     public bool GameIsPaused = false;
     public SceneBoss parent;
-
+    
     public GameObject pauseButton;
     public GameObject pauseMenuUI;
 

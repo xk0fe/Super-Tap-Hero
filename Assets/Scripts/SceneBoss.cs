@@ -7,7 +7,7 @@ public class SceneBoss : MonoBehaviour
 {
     public static int ScreenTap; //to understand how many times user tapped a screen
     public static uint CoinCount; //uint to prevent negative coin score  (highest coin score is 4,294,967,295)
-    public short LevelCoinCount;
+    public uint LevelCoinCount;
     public static bool StarCollected1, StarCollected2, StarCollected3; //check if star is collected
 
     void Start()
@@ -23,6 +23,11 @@ public class SceneBoss : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void AddCoinsOnCompletion() //adding level coins to game coins on level complete
+    {
+        CoinCount += LevelCoinCount;
     }
 
     public void RestartLevel()
