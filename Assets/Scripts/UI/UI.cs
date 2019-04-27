@@ -5,25 +5,16 @@ using UnityEngine.UI;
 
 public class UI : MonoBehaviour
 {
-    public GameObject RepeatButton;
-    public GameObject TapButton;
-    public Text countText;
-
+    public Text AllCoinCountText;
 
     void Update()
     {
-        countText.text = DeusEx.CoinCount.ToString();
+        AllCoinCountText.text = SceneBoss.CoinCount.ToString();
+    }
 
-        if (DeusEx.ScreenTap == 0) //show TAP icon if player has not tapped
-        {
-            RepeatButton.SetActive(false);
-            TapButton.SetActive(true);
-        }
-        else //hide TAP icon if player has tapped
-        {
-            RepeatButton.SetActive(true);
-            TapButton.SetActive(false);
-        }
+    void PlayLevel()
+    {
+
     }
 
 }

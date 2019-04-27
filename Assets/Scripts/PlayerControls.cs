@@ -29,7 +29,7 @@ public class PlayerControls : Move
 
     void RunningFunc()
     {
-        if (DeusEx.ScreenTap >= 1)
+        if (SceneBoss.ScreenTap >= 1)
         {
             MoveRight(); //Move.cs
         }
@@ -37,14 +37,14 @@ public class PlayerControls : Move
 
     public void JumpFunc()
     {
-        if(DeusEx.ScreenTap == 0) //player making a first tap
+        if(SceneBoss.ScreenTap == 0) //player making a first tap
         {
-            DeusEx.ScreenTap++;
+            SceneBoss.ScreenTap++;
             JumpHigh(); //Move.cs
         }
-        else if (onGround && DeusEx.ScreenTap >= 1) //all other taps
+        else if (onGround && SceneBoss.ScreenTap >= 1) //all other taps
         {
-            DeusEx.ScreenTap++;
+            SceneBoss.ScreenTap++;
             JumpHigh(); //Move.cs
         }
     }
@@ -54,17 +54,17 @@ public class PlayerControls : Move
     {
         if (other.gameObject.tag == "Star1")
         {
-            DeusEx.StarCollected1 = true;
+            SceneBoss.StarCollected1 = true;
             other.gameObject.SetActive(false);
         }
         if (other.gameObject.tag == "Star2")
         {
-            DeusEx.StarCollected2 = true;
+            SceneBoss.StarCollected2 = true;
             other.gameObject.SetActive(false);
         }
         if (other.gameObject.tag == "Star3")
         {
-            DeusEx.StarCollected3 = true;
+            SceneBoss.StarCollected3 = true;
             other.gameObject.SetActive(false);
         }
     }

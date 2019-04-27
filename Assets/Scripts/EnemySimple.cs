@@ -36,7 +36,7 @@ public class EnemySimple : Move
     {
         if (collision.gameObject.tag == "Player")
         {
-            MainObject.GetComponent<DeusEx>().RepeatButtonFunc();
+            MainObject.GetComponent<SceneBoss>().RestartLevel();
         }
     }
 

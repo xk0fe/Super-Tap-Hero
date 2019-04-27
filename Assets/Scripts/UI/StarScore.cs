@@ -22,17 +22,17 @@ public class StarScore : MonoBehaviour
 
     void ChangeUIicons() //changes a sprite if coin is collected 
     {
-        if (DeusEx.StarCollected1 == true)
+        if (SceneBoss.StarCollected1 == true)
         {
             smallStar1.GetComponent<Image>().sprite = GoldStar;
             bigStar1.GetComponent<Image>().sprite = GoldStar;
         }
-        if (DeusEx.StarCollected2 == true)
+        if (SceneBoss.StarCollected2 == true)
         {
             smallStar2.GetComponent<Image>().sprite = GoldStar;
             bigStar2.GetComponent<Image>().sprite = GoldStar;
         }
-        if (DeusEx.StarCollected3 == true)
+        if (SceneBoss.StarCollected3 == true)
         {
             smallStar3.GetComponent<Image>().sprite = GoldStar;
             bigStar3.GetComponent<Image>().sprite = GoldStar;

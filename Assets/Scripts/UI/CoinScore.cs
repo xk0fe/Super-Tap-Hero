@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class CoinScore : MonoBehaviour
 {
-    
-    
+
+    public SceneBoss parent;
 
     void Start()
     {
@@ -22,7 +22,7 @@ public class CoinScore : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            DeusEx.CoinCount++;
+            parent.LevelCoinCount++;
             this.gameObject.SetActive(false);
         }
     }
