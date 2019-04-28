@@ -9,21 +9,7 @@ public class SceneBoss : MonoBehaviour
     public static uint CoinCount; //uint to prevent negative coin score  (highest coin score is 4,294,967,295)
     public uint LevelCoinCount;
     public static bool StarCollected1, StarCollected2, StarCollected3; //check if star is collected
-
-    void Start()
-    {
-        
-    }
-
-    private void Awake()
-    {
-        DontDestroyOnLoad(this.gameObject);
-    }
-
-    void Update()
-    {
-        
-    }
+  
 
     public void AddCoinsOnCompletion() //adding level coins to game coins on level complete
     {
@@ -55,4 +41,5 @@ public class SceneBoss : MonoBehaviour
         StarCollected2 = false;
         StarCollected3 = false;
     }
+
 }

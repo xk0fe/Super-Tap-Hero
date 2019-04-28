@@ -4,10 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Coin1
   - Star1
   - Star2
   - Star3
+  - Coin
   layers:
   - Default
   - TransparentFX

@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class LevelComplete : MonoBehaviour
 {
-    public SceneBoss parent;
-    public GameObject LevelCompleteUI;
+    public LevelUI parent;
+    public GameObject LevelCompleteUI; //Level Comple Window
     public GameObject LevelCoinCount; //top hud element
     public GameObject LevelStarCount; //top hud element
-    public GameObject PauseButton;
+    public GameObject pauseButton;
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
-            parent.AddCoinsOnCompletion();
+            parent.parent.AddCoinsOnCompletion(); //LevelComplete : LevelUI : SceneBoss
             Time.timeScale = 0f;
+            pauseButton.SetActive(false);
             LevelCompleteUI.SetActive(true);
             LevelCoinCount.SetActive(false);
             LevelStarCount.SetActive(false);
-            PauseButton.SetActive(false);
         }
     }
 }
