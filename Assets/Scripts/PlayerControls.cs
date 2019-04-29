@@ -10,8 +10,7 @@ public class PlayerControls : Move
     public float groundCheckRadius;
     public LayerMask whatIsGround;
     private bool onGround;
-
-    
+    public bool playerDead;
 
     void Start()
     {
@@ -22,8 +21,9 @@ public class PlayerControls : Move
     {
         onGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
 
-        animator.SetFloat("Speed", rb.velocity.y);
+        animator.SetBool("Dead", playerDead);
         animator.SetBool("OnGround", onGround);
+        animator.SetFloat("Speed", rb.velocity.y);
         RunningFunc();
     }
 
@@ -52,7 +52,7 @@ public class PlayerControls : Move
 
     void OnTriggerEnter2D(Collider2D other) //every star has it own tag because is it easier to use individual tags instead of a proper code in a small game
     {
-        if (other.gameObject.tag == "Star1")
+        if (other.gameObject.name == "ColStar1")
         {
             SceneBoss.StarCollected1 = true;
             other.gameObject.SetActive(false);
@@ -67,5 +67,16 @@ public class PlayerControls : Move
             SceneBoss.StarCollected3 = true;
             other.gameObject.SetActive(false);
         }
+        if (other.gameObject.tag == "DeathTag")
+        {
+            playerDead = true;
+            StopMovement();
+        }
+    }
+
+    void StarFucking()
+    {
+        
+        
     }
 }

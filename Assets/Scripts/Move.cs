@@ -23,6 +23,11 @@ public class Move : MonoBehaviour
 
     public void JumpHigh() //called High so there is no confusion with JumpFunc();
     {
-        rb.velocity = new Vector2(rb.velocity.x, 5);
+        rb.velocity = new Vector2(rb.velocity.x, 7.4f);
+    }
+
+    public void StopMovement()
+    {
+        rb.constraints = RigidbodyConstraints2D.FreezeAll;
     }
 }
