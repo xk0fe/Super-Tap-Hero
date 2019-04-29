@@ -8,6 +8,9 @@ TagManager:
   - Star2
   - Star3
   - Coin
+  - Leaderboard
+  - StartMenu2
+  - StartMenu
   layers:
   - Default
   - TransparentFX
