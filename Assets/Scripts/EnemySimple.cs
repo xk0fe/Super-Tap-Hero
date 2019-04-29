@@ -4,31 +4,21 @@ using UnityEngine;
 
 public class EnemySimple : Move
 {
-    public Animator animator;
-
     public Transform groundCheck;
-    public float groundCheckRadius;
-    public LayerMask whatIsGround;
-    private bool onGround;
 
-    public GameObject MainObject;
+    public GameObject MainObject; //SceneBoss itself
     public GameObject Player;
 
     public static int ScreenTap; //to understand how many times user tapped a screen
-
-    public static bool CoinCollected1, CoinCollected2, CoinCollected3; //check if coin is collected
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         onGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
-
-        animator.SetFloat("Speed", rb.velocity.y);
-        animator.SetBool("OnGround", onGround);
         MoveLeftSlow();
     }
 
@@ -46,5 +36,16 @@ public class EnemySimple : Move
         {
             Destroy(this.gameObject);
         }
+        if (collision.gameObject.tag == "DeathTag")
+        {
+            isDead = true;
+            EnemyDead();
+            //Invoke("Test", 2); //causes method Test to run after a 2 seconds
+        }
+    }
+
+    void Test() //disabling enemy gameobject
+    {
+        this.gameObject.SetActive(false);
     }
 }

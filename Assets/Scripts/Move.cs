@@ -4,11 +4,25 @@ using UnityEngine;
 
 public class Move : MonoBehaviour
 {
+    public Animator animator;
     public Rigidbody2D rb;
+
+    public bool isDead;
+    public bool onGround;
+
+    public LayerMask whatIsGround = 1<<8;
+    public float groundCheckRadius = 0f;
 
     public void MoveRight()
     {
         rb.velocity = new Vector2(3, rb.velocity.y);
+    }
+
+    public void Update()
+    {
+        animator.SetBool("OnGround", onGround);
+        animator.SetBool("Dead", isDead);
+        animator.SetFloat("Speed", rb.velocity.x);
     }
 
     public void MoveLeft()
@@ -29,5 +43,11 @@ public class Move : MonoBehaviour
     public void StopMovement()
     {
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
+    }
+
+    public void EnemyDead()
+    {
+        rb.isKinematic = true;
+        rb.velocity = new Vector2(rb.velocity.x, -3);
     }
 }

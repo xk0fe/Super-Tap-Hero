@@ -4,9 +4,6 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Star1
-  - Star2
-  - Star3
   - Coin
   - Leaderboard
   - StartMenu2

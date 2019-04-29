@@ -433,7 +433,7 @@ GameObject:
   - component: {fileID: 143822582}
   m_Layer: 0
   m_Name: ColStar2
-  m_TagString: Star2
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6947,6 +6947,7 @@ GameObject:
   - component: {fileID: 604167256}
   - component: {fileID: 604167257}
   - component: {fileID: 604167261}
+  - component: {fileID: 604167262}
   - component: {fileID: 604167259}
   m_Layer: 10
   m_Name: Player
@@ -7080,14 +7081,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51db7b5b48e1a84479b7ca9b5001daf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 604167256}
   animator: {fileID: 604167259}
+  rb: {fileID: 604167256}
+  isDead: 0
+  onGround: 0
   groundCheck: {fileID: 622399141}
   groundCheckRadius: 0
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
-  playerDead: 0
 --- !u!95 &604167259
 Animator:
   serializedVersion: 3
@@ -7146,6 +7148,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.42169952, y: 0.20172906}
   m_EdgeRadius: 0
+--- !u!68 &604167262
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604167253}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: cb345dc1d97b940438767deacb4195a9, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.45}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 0.30037308, y: -0.5234807}
+  - {x: 0.7015991, y: -0.52402264}
 --- !u!1 &622399140
 GameObject:
   m_ObjectHideFlags: 0
@@ -8982,7 +9002,7 @@ GameObject:
   - component: {fileID: 1425195776}
   m_Layer: 0
   m_Name: ColStar1
-  m_TagString: Star1
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10288,8 +10308,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88ac5f6c89e116e48afc15ed8987b062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 1970344281}
   animator: {fileID: 1970344279}
+  rb: {fileID: 1970344281}
+  isDead: 0
+  onGround: 0
   groundCheck: {fileID: 2080513570}
   groundCheckRadius: 0
   whatIsGround:
@@ -10843,7 +10865,7 @@ GameObject:
   - component: {fileID: 2076074913}
   m_Layer: 0
   m_Name: ColStar3
-  m_TagString: Star3
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
