@@ -4,6 +4,7 @@
 [Bb]uild/
 [Bb]uilds/
 Assets/AssetStoreTools*
+Assets/StreamingAssets*
 
 # Visual Studio cache directory
 .vs/
@@ -40,3 +41,4 @@ sysinfo.txt
 *.idea
 *.DS_Store
 google-services.json
+google-services-desktop.json
