@@ -35,3 +35,8 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+# Stuff
+*.idea
+*.DS_Store
+google-services.json
