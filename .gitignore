@@ -41,3 +41,4 @@ sysinfo.txt
 *.idea
 *.DS_Store
 google-services.json
+google-services-desktop.json
