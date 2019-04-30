@@ -21,7 +21,7 @@ public class EnemySimple : Move
         onGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
         MoveLeftSlow();
     }
-
+    
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -39,13 +39,7 @@ public class EnemySimple : Move
         if (collision.gameObject.tag == "DeathTag")
         {
             isDead = true;
-            EnemyDead();
-            //Invoke("Test", 2); //causes method Test to run after a 2 seconds
+            DisableGameObject();
         }
-    }
-
-    void Test() //disabling enemy gameobject
-    {
-        this.gameObject.SetActive(false);
     }
 }

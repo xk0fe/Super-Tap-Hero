@@ -27,12 +27,26 @@ public class Move : MonoBehaviour
 
     public void MoveLeft()
     {
-        rb.velocity = new Vector2(-3, rb.velocity.y);
+        if (isDead == false)
+        {
+            rb.velocity = new Vector2(-3, rb.velocity.y);
+        }
+        else
+        {
+            rb.velocity = new Vector2(0, rb.velocity.y);
+        }
     }
 
     public void MoveLeftSlow()
     {
-        rb.velocity = new Vector2(-2, rb.velocity.y);
+        if (isDead == false)
+        {
+            rb.velocity = new Vector2(-2, rb.velocity.y);
+        }
+        else
+        {
+            rb.velocity = new Vector2(0, rb.velocity.y);
+        }
     }
 
     public void JumpHigh() //called High so there is no confusion with JumpFunc();
@@ -45,9 +59,8 @@ public class Move : MonoBehaviour
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
     }
 
-    public void EnemyDead()
+    public void DisableGameObject() //disabling gameobject
     {
-        rb.isKinematic = true;
-        rb.velocity = new Vector2(rb.velocity.x, -3);
+        this.gameObject.SetActive(false);
     }
 }
