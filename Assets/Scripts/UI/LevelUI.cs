@@ -48,17 +48,17 @@ public class LevelUI : MonoBehaviour
 
     void ChangeUIicons() //changes a sprite if coin is collected 
     {
-        if (SceneBoss.StarCollected1 == true)
+        if (SceneBoss.StarCollected1 == 1)
         {
             smallStar1.GetComponent<Image>().sprite = GoldStar;
             bigStar1.GetComponent<Image>().sprite = GoldStar;
         }
-        if (SceneBoss.StarCollected2 == true)
+        if (SceneBoss.StarCollected2 == 1)
         {
             smallStar2.GetComponent<Image>().sprite = GoldStar;
             bigStar2.GetComponent<Image>().sprite = GoldStar;
         }
-        if (SceneBoss.StarCollected3 == true)
+        if (SceneBoss.StarCollected3 == 1)
         {
             smallStar3.GetComponent<Image>().sprite = GoldStar;
             bigStar3.GetComponent<Image>().sprite = GoldStar;

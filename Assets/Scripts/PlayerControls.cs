@@ -44,17 +44,17 @@ public class PlayerControls : Move
     {
         if (collision.gameObject.name == "ColStar1")
         {
-            SceneBoss.StarCollected1 = true;
+            SceneBoss.StarCollected1 = 1;
             collision.gameObject.SetActive(false);
         }
         if (collision.gameObject.name == "ColStar2")
         {
-            SceneBoss.StarCollected2 = true;
+            SceneBoss.StarCollected2 = 1;
             collision.gameObject.SetActive(false);
         }
         if (collision.gameObject.name == "ColStar3")
         {
-            SceneBoss.StarCollected3 = true;
+            SceneBoss.StarCollected3 = 1;
             collision.gameObject.SetActive(false);
         }
         if (collision.gameObject.tag == "DeathTag")
@@ -62,11 +62,5 @@ public class PlayerControls : Move
             isDead = true;
             StopMovement();
         }
-    }
-
-    void StarFucking()
-    {
-        
-        
     }
 }

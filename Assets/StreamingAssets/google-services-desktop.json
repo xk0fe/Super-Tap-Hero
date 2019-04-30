@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "226804848572",
+    "firebase_url": "https://one-tap-hero.firebaseio.com",
+    "project_id": "one-tap-hero",
+    "storage_bucket": "one-tap-hero.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:226804848572:android:edf084021985fa34",
+        "android_client_info": {
+          "package_name": "com.k0fe.OneTapHero"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "226804848572-9oe769kggtettuhvn0h6kt8cmiov6tqv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcaG1fA0e2iXq4yTDK_ONnEfnWL6JhBGk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "226804848572-9oe769kggtettuhvn0h6kt8cmiov6tqv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
