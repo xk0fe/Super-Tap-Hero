@@ -1,5 +1,5 @@
-# Simple Platformer
-A simple one button Unity 2D platformer using Kenney assets.
+# Simple Platformer <img src="https://github.com/xk0fe/Simple-Platformer/blob/master/Images/gameicon_small.png" height="48" width="48">
+ A simple one button Unity 2D platformer using Kenney assets.
 
 # Scripts Structure
 ![Scripts Structure](Images/ScriptStructure.png)
