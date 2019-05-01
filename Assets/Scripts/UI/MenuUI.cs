@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class MenuUI : MonoBehaviour
 {
+    public SceneBoss parent;
     public Text AllCoinCountText;
     [Header("Images")]
     public Sprite SilverStar;

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class LevelUI : MonoBehaviour
 {
-    public SceneBoss parent;
+    public MenuUI parent;
 
     public GameObject pauseButton;
     public GameObject TapIcon;
@@ -27,8 +27,8 @@ public class LevelUI : MonoBehaviour
     void Update()
     {
         ChangeUIicons();
-        LevelCoinCountText.text = parent.LevelCoinCount.ToString(); //showing coin count while playing
-        LevelCompleteCoinCountText.text = parent.LevelCoinCount.ToString(); //showing coin coint count on a "level complete" screen
+        LevelCoinCountText.text = SceneBoss.LevelCoinCount.ToString(); //showing coin count while playing
+        LevelCompleteCoinCountText.text = SceneBoss.LevelCoinCount.ToString(); //showing coin coint count on a "level complete" screen
 
         
     }

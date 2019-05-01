@@ -7,9 +7,9 @@ public class SceneBoss : GameBoss
 {
     public static int ScreenTap; //to understand how many times user tapped a screen
     public static int CoinCount; //uint to prevent negative coin score  (highest coin score is 4,294,967,295)
-    public int LevelCoinCount;
+    public static int LevelCoinCount;
     public static int StarCollected1, StarCollected2, StarCollected3; //check if star is collected
-    string currentScene;
+    static string currentScene;
 
     private void Start()
     {
@@ -17,7 +17,7 @@ public class SceneBoss : GameBoss
         CoinCount = PlayerPrefs.GetInt("Coins");
     }
 
-    public void AddCoinsOnCompletion() //adding level coins to game coins on level complete
+    public static void AddCoinsOnCompletion() //adding level coins to game coins on level complete
     {
         CoinCount += LevelCoinCount;
         SaveData();
@@ -39,12 +39,13 @@ public class SceneBoss : GameBoss
     {
         Time.timeScale = 1f;
         ScreenTap = 0;
+        LevelCoinCount = 0;
         StarCollected1 = 0;
         StarCollected2 = 0;
         StarCollected3 = 0;
     }
 
-    public void SaveData()
+    public static void SaveData()
     {
         PlayerPrefs.SetInt("Coins", CoinCount);
 

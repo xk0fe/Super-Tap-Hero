@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources tools:keep="@string/firebase_database_url,@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id,@string/default_web_client_id" xmlns:tools="http://schemas.android.com/tools">
+  <string name="firebase_database_url" translatable="false">https://one-tap-hero.firebaseio.com</string>
+  <string name="gcm_defaultSenderId" translatable="false">226804848572</string>
+  <string name="google_storage_bucket" translatable="false">one-tap-hero.appspot.com</string>
+  <string name="project_id" translatable="false">one-tap-hero</string>
+  <string name="google_api_key" translatable="false">AIzaSyBcaG1fA0e2iXq4yTDK_ONnEfnWL6JhBGk</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBcaG1fA0e2iXq4yTDK_ONnEfnWL6JhBGk</string>
+  <string name="google_app_id" translatable="false">1:226804848572:android:edf084021985fa34</string>
+  <string name="default_web_client_id" translatable="false">226804848572-9oe769kggtettuhvn0h6kt8cmiov6tqv.apps.googleusercontent.com</string>
+</resources>

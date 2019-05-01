@@ -10,7 +10,7 @@ public class ItemCollect : MonoBehaviour
     {
         if (coin.gameObject.tag == "Coin")
         {
-            parent.parent.LevelCoinCount++; //add coin - ItemCollect : LevelUI : SceneBoss
+            SceneBoss.LevelCoinCount++; //add coin - ItemCollect : LevelUI : MenuUI : SceneBoss
             coin.gameObject.SetActive(false); //destroy coin
         }
     }
