@@ -9794,7 +9794,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 622399140}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: -0.999, z: -2.0551305}
+  m_LocalPosition: {x: 0.5, y: -1.072, z: -2.0551305}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 604167255}
@@ -10960,7 +10960,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 864564fd30762df4f9db95a5fdf6f9b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parent: {fileID: 1436126078}
+  parent: {fileID: 0}
   pauseButton: {fileID: 2032818055}
   TapIcon: {fileID: 1864676498}
   LevelCoinCountText: {fileID: 146963060}
@@ -14773,7 +14773,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a763589fe709324782ed3198d74972c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelCoinCount: 0
 --- !u!4 &1436126079
 Transform:
   m_ObjectHideFlags: 0
