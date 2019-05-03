@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    public SceneBoss parent;
+    public LevelManager parent;
     
     public GameObject pauseButton;
     public GameObject pauseMenuUI;

@@ -19,7 +19,7 @@ public class PlayerControls : Move
 
     void RunningFunc()
     {
-        if (SceneBoss.ScreenTap >= 1)
+        if (LevelManager.ScreenTap >= 1)
         {
             MoveRight(); //Move.cs
         }
@@ -27,14 +27,14 @@ public class PlayerControls : Move
 
     public void JumpFunc()
     {
-        if(SceneBoss.ScreenTap == 0) //player making a first tap
+        if(LevelManager.ScreenTap == 0) //player making a first tap
         {
-            SceneBoss.ScreenTap++;
+            LevelManager.ScreenTap++;
             JumpHigh(); //Move.cs
         }
-        else if (onGround && SceneBoss.ScreenTap >= 1) //all other taps
+        else if (onGround && LevelManager.ScreenTap >= 1) //all other taps
         {
-            SceneBoss.ScreenTap++;
+            LevelManager.ScreenTap++;
             JumpHigh(); //Move.cs
         }
     }
@@ -44,17 +44,17 @@ public class PlayerControls : Move
     {
         if (collision.gameObject.name == "ColStar1")
         {
-            SceneBoss.StarCollected1 = 1;
+            LevelManager.StarCollected1 = 1;
             collision.gameObject.SetActive(false);
         }
         if (collision.gameObject.name == "ColStar2")
         {
-            SceneBoss.StarCollected2 = 1;
+            LevelManager.StarCollected2 = 1;
             collision.gameObject.SetActive(false);
         }
         if (collision.gameObject.name == "ColStar3")
         {
-            SceneBoss.StarCollected3 = 1;
+            LevelManager.StarCollected3 = 1;
             collision.gameObject.SetActive(false);
         }
         if (collision.gameObject.tag == "DeathTag")

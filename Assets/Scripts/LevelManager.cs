@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneBoss : GameBoss
+public class LevelManager : GameBoss
 {
     public static int ScreenTap; //to understand how many times user tapped a screen
     public static int CoinCount; //uint to prevent negative coin score  (highest coin score is 4,294,967,295)
     public static int LevelCoinCount;
     public static int StarCollected1, StarCollected2, StarCollected3; //check if star is collected
     static string currentScene;
+    public bool playerIsDead;
 
     private void Start()
     {

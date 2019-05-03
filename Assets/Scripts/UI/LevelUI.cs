@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class LevelUI : MonoBehaviour
 {
-    public MenuUI parent;
-
+    public PlayerControls player;
     public GameObject pauseButton;
-    public GameObject TapIcon;
+    public GameObject restartButton;
+    public GameObject tapIcon;
     [Header("Coin score")]
     public Text LevelCoinCountText;
     public Text LevelCompleteCoinCountText;
@@ -27,41 +27,56 @@ public class LevelUI : MonoBehaviour
     void Update()
     {
         ChangeUIicons();
-        LevelCoinCountText.text = SceneBoss.LevelCoinCount.ToString(); //showing coin count while playing
-        LevelCompleteCoinCountText.text = SceneBoss.LevelCoinCount.ToString(); //showing coin coint count on a "level complete" screen
+        LevelCoinCountText.text = LevelManager.LevelCoinCount.ToString(); //showing coin count while playing
+        LevelCompleteCoinCountText.text = LevelManager.LevelCoinCount.ToString(); //showing coin coint count on a "level complete" screen
 
         
     }
 
     public void TapCheck()
     {
-        if (SceneBoss.ScreenTap == 0) //no taps
+        if (LevelManager.ScreenTap == 0) //no taps
         {
-            TapIcon.SetActive(true); //show TAP icon
+            tapIcon.SetActive(true); //show TAP icon
         }
         else //player tapped
         {
             pauseButton.SetActive(true); //show PAUSE button
-            TapIcon.SetActive(false); //disable TAP icon
+            tapIcon.SetActive(false); //disable TAP icon
         }
     }
 
     void ChangeUIicons() //changes a sprite if coin is collected 
     {
-        if (SceneBoss.StarCollected1 == 1)
+        RestartButton();
+
+        if (LevelManager.StarCollected1 == 1)
         {
             smallStar1.GetComponent<Image>().sprite = GoldStar;
             bigStar1.GetComponent<Image>().sprite = GoldStar;
         }
-        if (SceneBoss.StarCollected2 == 1)
+        if (LevelManager.StarCollected2 == 1)
         {
             smallStar2.GetComponent<Image>().sprite = GoldStar;
             bigStar2.GetComponent<Image>().sprite = GoldStar;
         }
-        if (SceneBoss.StarCollected3 == 1)
+        if (LevelManager.StarCollected3 == 1)
         {
             smallStar3.GetComponent<Image>().sprite = GoldStar;
             bigStar3.GetComponent<Image>().sprite = GoldStar;
+        }
+    }
+
+    public void RestartButton()
+    {
+        if (player.isDead == true)
+        {
+            restartButton.SetActive(true);
+            pauseButton.SetActive(false);
+        }
+        else
+        {
+            restartButton.SetActive(false);
         }
     }
 }

@@ -14,7 +14,7 @@ public class LevelComplete : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            SceneBoss.AddCoinsOnCompletion(); //LevelComplete : LevelUI : SceneBoss
+            LevelManager.AddCoinsOnCompletion(); //LevelComplete : LevelUI : SceneBoss
             Time.timeScale = 0f;
             pauseButton.SetActive(false);
             LevelCompleteUI.SetActive(true);

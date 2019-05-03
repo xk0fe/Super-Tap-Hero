@@ -26,7 +26,7 @@ public class EnemySimple : Move
     {
         if (collision.gameObject.tag == "Player")
         {
-            MainObject.GetComponent<SceneBoss>().RestartLevel();
+            MainObject.GetComponent<LevelManager>().RestartLevel();
         }
     }
 

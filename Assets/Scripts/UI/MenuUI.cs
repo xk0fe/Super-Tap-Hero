@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class MenuUI : MonoBehaviour
 {
-    public SceneBoss parent;
+    public LevelManager parent;
     public Text AllCoinCountText;
     [Header("Images")]
     public Sprite SilverStar;
@@ -18,7 +18,7 @@ public class MenuUI : MonoBehaviour
 
     void Update()
     {
-        AllCoinCountText.text = SceneBoss.CoinCount.ToString();
+        AllCoinCountText.text = LevelManager.CoinCount.ToString();
         DataManager.LoadData();
         ChangeLevelStars();
     }
