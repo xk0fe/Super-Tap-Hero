@@ -9509,9 +9509,8 @@ GameObject:
   - component: {fileID: 604167254}
   - component: {fileID: 604167256}
   - component: {fileID: 604167257}
-  - component: {fileID: 604167261}
-  - component: {fileID: 604167262}
   - component: {fileID: 604167259}
+  - component: {fileID: 604167263}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -9619,7 +9618,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.53308296, y: -0.6097443}
+  m_Offset: {x: 0.5, y: -0.6097443}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 1}
@@ -9630,7 +9629,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6152649, y: 0.59520626}
+  m_Size: {x: 0.5, y: 0.59520626}
   m_EdgeRadius: 0
 --- !u!114 &604167258
 MonoBehaviour:
@@ -9685,8 +9684,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parent: {fileID: 774991871}
---- !u!61 &604167261
-BoxCollider2D:
+--- !u!58 &604167263
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -9694,41 +9693,13 @@ BoxCollider2D:
   m_GameObject: {fileID: 604167253}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: cb345dc1d97b940438767deacb4195a9, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.5149689, y: -0.86936724}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 1}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1.92, y: 1.92}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0.5, y: -0.74}
   serializedVersion: 2
-  m_Size: {x: 0.42169952, y: 0.20172906}
-  m_EdgeRadius: 0
---- !u!68 &604167262
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 604167253}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: cb345dc1d97b940438767deacb4195a9, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.45}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: 0.30037308, y: -0.5234807}
-  - {x: 0.7015991, y: -0.52402264}
+  m_Radius: 0.25
 --- !u!1 &604932094
 GameObject:
   m_ObjectHideFlags: 0
