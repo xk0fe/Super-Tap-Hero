@@ -9,16 +9,8 @@ public class EnemySimple : Move
     public GameObject MainObject; //SceneBoss itself
     public GameObject Player;
 
-    public static int ScreenTap; //to understand how many times user tapped a screen
-
-    void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-    }
-
     void FixedUpdate()
     {
-        onGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
         MoveLeftSlow();
     }
     

@@ -18,7 +18,7 @@ public class LevelManager : GameBoss
         CoinCount = PlayerPrefs.GetInt("Coins");
     }
 
-    public static void AddCoinsOnCompletion() //adding level coins to game coins on level complete
+    public void AddCoinsOnCompletion() //adding level coins to game coins on level complete
     {
         CoinCount += LevelCoinCount;
         SaveData();
@@ -46,15 +46,31 @@ public class LevelManager : GameBoss
         StarCollected3 = 0;
     }
 
-    public static void SaveData()
+    public void SaveData()
     {
         PlayerPrefs.SetInt("Coins", CoinCount);
+        Social.ReportScore(PlayerPrefs.GetInt("Coins"), leaderboard, (bool success) =>
+        {
+            if (success) print("Leadeboard updated!");
+            else print("Leaderboard was not updated for some reason");
+        });
 
         if (currentScene == "Level1")
         {
-            PlayerPrefs.SetInt("Level 1 Star 1", StarCollected1);
-            PlayerPrefs.SetInt("Level 1 Star 2", StarCollected2);
-            PlayerPrefs.SetInt("Level 1 Star 3", StarCollected3);
+            GetTheAchievement(achievement1);
+            if (StarCollected1 == 1)
+            {
+                PlayerPrefs.SetInt("Level 1 Star 1", StarCollected1);
+            }
+            if (StarCollected2 == 1)
+            {
+                PlayerPrefs.SetInt("Level 1 Star 2", StarCollected2);
+            }
+            if (StarCollected3 == 1)
+            {
+                PlayerPrefs.SetInt("Level 1 Star 3", StarCollected3);
+            }
+            
             Debug.Log("Data stored!");
         }
         else

@@ -8,7 +8,6 @@ public class Move : MonoBehaviour
     public Rigidbody2D rb;
 
     public bool isDead;
-    public bool onGround;
 
     public LayerMask whatIsGround = 1<<8;
     public float groundCheckRadius = 0f;
@@ -20,7 +19,6 @@ public class Move : MonoBehaviour
 
     public void Update()
     {
-        animator.SetBool("OnGround", onGround);
         animator.SetBool("Dead", isDead);
         animator.SetFloat("Speed", rb.velocity.x);
     }

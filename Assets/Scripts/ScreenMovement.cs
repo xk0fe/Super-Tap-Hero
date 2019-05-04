@@ -39,9 +39,14 @@ public class ScreenMovement : MonoBehaviour
         rb.velocity = new Vector2(-1800, rb.velocity.y);
     }
 
-    public void MoveScreenToLeaderboard()
+    public void ToLeaderboard()
     {
-        rb.velocity = new Vector2(rb.velocity.x, -1800);
+        Social.ShowLeaderboardUI();
+    }
+
+    public void ToAchievement()
+    {
+        Social.ShowAchievementsUI();
     }
 
     public void MoveScreenToMainFromLeaderboard()

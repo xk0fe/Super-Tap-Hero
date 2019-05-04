@@ -1,13 +1,41 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms;
+using GooglePlayGames;
+using GooglePlayGames.BasicApi;
 
 public class GameBoss : MonoBehaviour
 {
-    [HideInInspector]
-    public static int Lvl1Star1, Lvl1Star2, Lvl1Star3;
-    [HideInInspector]
-    public static int Lvl2Star1,Lvl2Star2, Lvl2Star3;
-    [HideInInspector]
-    public static int Lvl3Star1,Lvl3Star2, Lvl3Star3;
+    public const string achievement1 = "CggItbTZvnIQAhAA";
+    public const string leaderboard = "CggItbTZvnIQAhAC";
+
+    private void Start()
+    {
+        PlayGamesPlatform.Activate();
+        Social.localUser.Authenticate((bool success) =>
+        {
+            if (success) print("Connection estabileshed");
+            else print("Google service login error");
+        });
+    }
+
+    private void Update()
+    {
+        
+    }
+
+    private void OnApplicationQuit()
+    {
+        PlayGamesPlatform.Instance.SignOut();
+    }
+
+    public void GetTheAchievement(string id)
+    {
+        Social.ReportProgress(id, 100.0f, (bool success) =>
+        {
+            if (success) print("Achievement get: " + id);
+        });
+    }
+
 }

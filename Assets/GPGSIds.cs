@@ -25,6 +25,7 @@
 public static class GPGSIds
 {
         public const string achievement_level_completed = "CggItbTZvnIQAhAA"; // <GPGSID>
+        public const string leaderboard_top_wealthier_heroes = "CggItbTZvnIQAhAC"; // <GPGSID>
 
 }
 

@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerControls : Move
 {
     public Transform groundCheck;
+    public bool onGround;
 
     void Start()
     {
@@ -13,6 +14,7 @@ public class PlayerControls : Move
 
     void FixedUpdate()
     {
+        animator.SetBool("OnGround", onGround);
         onGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
         RunningFunc();
     }
