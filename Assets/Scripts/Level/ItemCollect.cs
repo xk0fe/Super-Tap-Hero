@@ -14,4 +14,14 @@ public class ItemCollect : MonoBehaviour
             coin.gameObject.SetActive(false); //destroy coin
         }
     }
+
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Debug.Log("Space key was pressed.");
+        }
+    }
 }
+

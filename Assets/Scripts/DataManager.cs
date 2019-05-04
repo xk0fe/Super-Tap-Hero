@@ -13,4 +13,5 @@ public static class DataManager
         Level1Star2 = PlayerPrefs.GetInt("Level 1 Star 2");
         Level1Star3 = PlayerPrefs.GetInt("Level 1 Star 3");
     }
+
 }
