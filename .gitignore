@@ -41,5 +41,7 @@ sysinfo.txt
 # Stuff
 *.idea
 *.DS_Store
+
+GooglePlayGameSettings.txt
 google-services.json
 google-services-desktop.json
