@@ -20,9 +20,18 @@ public class GameBoss : MonoBehaviour
         });
     }
 
-    private void Update()
+    public void UpdateLeaderboard()
     {
-        
+        Social.ReportScore(LevelManager.CoinCount, "CggItbTZvnIQAhAC", (bool success) => {
+            if (success) print("Your coins been recorded.");
+            else print("Coins are destroyed ;o");
+        });
+    }
+
+
+    public void ResetSavedData()
+    {
+        PlayerPrefs.DeleteAll();
     }
 
     private void OnApplicationQuit()
