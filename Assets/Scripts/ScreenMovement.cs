@@ -27,6 +27,16 @@ public class ScreenMovement : MonoBehaviour
         rb.velocity = new Vector2(-1800, rb.velocity.y);
     }
 
+    public void MoveToStats()
+    {
+        rb.velocity = new Vector2(rb.velocity.x, -1800);
+    }
+
+    public void MoveScreenToMainFromStats()
+    {
+        rb.velocity = new Vector2(rb.velocity.x, 1800);
+    }
+
     public void MoveToMainFromLvlSelection()
     {
         StartMenu.GetComponent<BoxCollider2D>().enabled = true;
@@ -47,10 +57,5 @@ public class ScreenMovement : MonoBehaviour
     public void ToAchievement()
     {
         Social.ShowAchievementsUI();
-    }
-
-    public void MoveScreenToMainFromLeaderboard()
-    {
-        rb.velocity = new Vector2(rb.velocity.x, 1800);
     }
 }
