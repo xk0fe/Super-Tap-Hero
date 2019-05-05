@@ -27,7 +27,14 @@ public class Move : MonoBehaviour
     {
         if (isDead == false)
         {
-            rb.velocity = new Vector2(-3, rb.velocity.y);
+            if (LevelManager.ScreenTap >= 1) //enemies starting to move only if player tapped
+            {
+                rb.velocity = new Vector2(-3, rb.velocity.y);
+            }
+            else
+            {
+                Debug.Log("none");
+            }
         }
         else
         {
@@ -39,7 +46,10 @@ public class Move : MonoBehaviour
     {
         if (isDead == false)
         {
-            rb.velocity = new Vector2(-2, rb.velocity.y);
+            if (LevelManager.ScreenTap >= 1) //enemies starting to move only if player tapped
+            {
+                rb.velocity = new Vector2(-2, rb.velocity.y);
+            }
         }
         else
         {
