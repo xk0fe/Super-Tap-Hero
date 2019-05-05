@@ -56,15 +56,16 @@ public class Move : MonoBehaviour
             rb.velocity = new Vector2(0, rb.velocity.y);
         }
     }
-
+    
     public void JumpHigh() //called High so there is no confusion with JumpFunc();
     {
         rb.velocity = new Vector2(rb.velocity.x, 7.4f);
     }
 
-    public void StopMovement()
+    public void StopMovement() //no longer a StopMovement function, should be renamed
     {
-        rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        rb.constraints = RigidbodyConstraints2D.FreezePositionX;
+        rb.velocity = new Vector2(rb.velocity.x, -5f);
     }
 
     public void DisableGameObject() //disabling gameobject
