@@ -22,6 +22,10 @@ public class GameBoss : MonoBehaviour
 
     public void UpdateLeaderboard()
     {
+        if(!PlayGamesPlatform.Instance.localUser.authenticated)
+        {
+            return;
+        }
         Social.ReportScore(LevelManager.CoinCount, "CggItbTZvnIQAhAC", (bool success) => {
             if (success) print("Your coins been recorded.");
             else print("Coins are destroyed ;o");

@@ -23,7 +23,7 @@ public class LevelManager : GameBoss
     {
         CoinCount += LevelCoinCount;
         PlayerPrefs.SetInt("Coins", CoinCount);
-        CheckForLevel();
+        StarsMerging();
     }
 
     public void RestartLevel()
@@ -49,19 +49,7 @@ public class LevelManager : GameBoss
         StarCollected3 = 0;
     }
 
-    public void CheckForLevel()
-    {
-        if (currentScene == "Level1")
-        {
-            Level1();
-        }
-        else
-        {
-            Debug.Log("in development");
-        }
-    }
-
-    public void Level1()
+    public void StarsMerging()
     {
         GetTheAchievement(achievement1);
         if (StarCollected1 == 1)
@@ -77,9 +65,7 @@ public class LevelManager : GameBoss
             PlayerPrefs.SetInt(levelName + "S3", StarCollected3);
         }
 
-        Debug.Log("Level 1 data stored!");
+        Debug.Log(levelName + " data stored!");
     }
-
-    
 }
 

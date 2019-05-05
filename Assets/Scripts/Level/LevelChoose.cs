@@ -37,11 +37,11 @@ public class LevelChoose : MonoBehaviour
         }
         if (btnLvl2 == true)
         {
-            Debug.LogWarning("In development");
+            SceneManager.LoadScene("Level2", LoadSceneMode.Single);
         }
         if (btnLvl3 == true)
         {
-            Debug.LogWarning("In development");
+            SceneManager.LoadScene("Level3", LoadSceneMode.Single);
         }
     }
 

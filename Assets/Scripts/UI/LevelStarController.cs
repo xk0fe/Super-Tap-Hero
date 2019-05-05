@@ -10,7 +10,7 @@ public class LevelStarController : MonoBehaviour
     [Header("Images")]
     public Sprite SilverStar;
     public Sprite GoldStar;
-    [Header("1 level")]
+    [Header("Star objects")]
     public GameObject lvl1Star1;
     public GameObject lvl1Star2;
     public GameObject lvl1Star3;
