@@ -59,7 +59,14 @@ public class Move : MonoBehaviour
     
     public void JumpHigh() //called High so there is no confusion with JumpFunc();
     {
-        rb.velocity = new Vector2(rb.velocity.x, 7.4f);
+        if(isDead == true)
+        {
+            //
+        }
+        else
+        {
+            rb.velocity = new Vector2(rb.velocity.x, 7.4f);
+        }
     }
 
     public void StopMovement() //no longer a StopMovement function, should be renamed

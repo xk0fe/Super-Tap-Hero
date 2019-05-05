@@ -66,6 +66,15 @@ public class LevelManager : GameBoss
         }
 
         Debug.Log(levelName + " data stored!");
+        CheckForThreeStarsAch();
+    }
+
+    public void CheckForThreeStarsAch()
+    {
+        if (StarCollected1 == 1 && StarCollected2 == 1 && StarCollected3 == 1)
+        {
+            GetTheAchievement(achievement2);
+        }
     }
 }
 

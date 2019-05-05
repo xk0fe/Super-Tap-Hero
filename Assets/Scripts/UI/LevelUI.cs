@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LevelUI : MonoBehaviour
+public class LevelUI : LevelCharacterSwitch
 {
-    public PlayerControls player;
     public GameObject pauseButton;
     public GameObject restartButton;
     public GameObject tapIcon;
@@ -29,8 +28,6 @@ public class LevelUI : MonoBehaviour
         ChangeUIicons();
         LevelCoinCountText.text = LevelManager.LevelCoinCount.ToString(); //showing coin count while playing
         LevelCompleteCoinCountText.text = LevelManager.LevelCoinCount.ToString(); //showing coin coint count on a "level complete" screen
-
-        
     }
 
     public void TapCheck()
@@ -69,7 +66,7 @@ public class LevelUI : MonoBehaviour
 
     public void RestartButton()
     {
-        if (player.isDead == true)
+        if (Active.GetComponent<PlayerControls>().isDead == true)
         {
             restartButton.SetActive(true);
             pauseButton.SetActive(false);

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScreenMovement : MonoBehaviour
+public class ScreenMovement : GameBoss
 {
     public Rigidbody2D rb;
     public GameObject StartMenu, SecondMenuCollider;
@@ -29,6 +29,7 @@ public class ScreenMovement : MonoBehaviour
 
     public void MoveToStats()
     {
+        GetTheAchievement(achievement3);
         rb.velocity = new Vector2(rb.velocity.x, -1800);
     }
 
