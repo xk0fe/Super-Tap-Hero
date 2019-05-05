@@ -11,6 +11,7 @@ public class LevelManager : GameBoss
     public static int StarCollected1, StarCollected2, StarCollected3; //check if star is collected
     static string currentScene;
     public bool playerIsDead;
+    public string levelName = "L";
 
     private void Start()
     {
@@ -21,7 +22,8 @@ public class LevelManager : GameBoss
     public void AddCoinsOnCompletion() //adding level coins to game coins on level complete
     {
         CoinCount += LevelCoinCount;
-        SaveData();
+        PlayerPrefs.SetInt("Coins", CoinCount);
+        CheckForLevel();
     }
 
     public void RestartLevel()
@@ -39,6 +41,7 @@ public class LevelManager : GameBoss
     public void ResetLevelVariables()
     {
         Time.timeScale = 1f;
+        UpdateLeaderboard();
         ScreenTap = 0;
         LevelCoinCount = 0;
         StarCollected1 = 0;
@@ -46,32 +49,11 @@ public class LevelManager : GameBoss
         StarCollected3 = 0;
     }
 
-    public void SaveData()
+    public void CheckForLevel()
     {
-        PlayerPrefs.SetInt("Coins", CoinCount);
-        Social.ReportScore(PlayerPrefs.GetInt("Coins"), leaderboard, (bool success) =>
-        {
-            if (success) print("Leadeboard updated!");
-            else print("Leaderboard was not updated for some reason");
-        });
-
         if (currentScene == "Level1")
         {
-            GetTheAchievement(achievement1);
-            if (StarCollected1 == 1)
-            {
-                PlayerPrefs.SetInt("Level 1 Star 1", StarCollected1);
-            }
-            if (StarCollected2 == 1)
-            {
-                PlayerPrefs.SetInt("Level 1 Star 2", StarCollected2);
-            }
-            if (StarCollected3 == 1)
-            {
-                PlayerPrefs.SetInt("Level 1 Star 3", StarCollected3);
-            }
-            
-            Debug.Log("Data stored!");
+            Level1();
         }
         else
         {
@@ -79,8 +61,25 @@ public class LevelManager : GameBoss
         }
     }
 
-    public void ResetSavedData()
+    public void Level1()
     {
-        PlayerPrefs.DeleteAll();
+        GetTheAchievement(achievement1);
+        if (StarCollected1 == 1)
+        {
+            PlayerPrefs.SetInt(levelName + "S1", StarCollected1);
+        }
+        if (StarCollected2 == 1)
+        {
+            PlayerPrefs.SetInt(levelName + "S2", StarCollected2);
+        }
+        if (StarCollected3 == 1)
+        {
+            PlayerPrefs.SetInt(levelName + "S3", StarCollected3);
+        }
+
+        Debug.Log("Level 1 data stored!");
     }
+
+    
 }
+
