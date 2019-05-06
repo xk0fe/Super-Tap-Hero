@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelPref : MonoBehaviour
+public class LevelPref
 {
     public string levelName { get; set; }
     public int star1 { get; set; }

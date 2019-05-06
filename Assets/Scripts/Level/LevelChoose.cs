@@ -7,11 +7,6 @@ public class LevelChoose : MonoBehaviour
 {
     public bool btnLvl1, btnLvl2, btnLvl3;
     public GameObject PlayButton;
-
-    void Start()
-    {
-        
-    }
     
     void Update()
     {
