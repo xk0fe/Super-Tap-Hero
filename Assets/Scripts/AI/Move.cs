@@ -14,7 +14,7 @@ public class Move : MonoBehaviour
 
     public void MoveRight()
     {
-        rb.velocity = new Vector2(3, rb.velocity.y);
+        rb.velocity = new Vector2(4, rb.velocity.y);
     }
 
     public void Update()
@@ -65,14 +65,13 @@ public class Move : MonoBehaviour
         }
         else
         {
-            rb.velocity = new Vector2(rb.velocity.x, 7.4f);
+            rb.velocity = new Vector2(rb.velocity.x, 8);
         }
     }
 
     public void StopMovement() //no longer a StopMovement function, should be renamed
     {
         rb.constraints = RigidbodyConstraints2D.FreezePositionX;
-        rb.velocity = new Vector2(rb.velocity.x, -5f);
     }
 
     public void DisableGameObject() //disabling gameobject
