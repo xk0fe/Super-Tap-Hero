@@ -65,7 +65,7 @@ public class Move : MonoBehaviour
         }
         else
         {
-            rb.velocity = new Vector2(rb.velocity.x, 8);
+            rb.velocity = new Vector2(rb.velocity.x, 12);
         }
     }
 
