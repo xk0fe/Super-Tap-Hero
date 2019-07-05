@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class LevelComplete : MonoBehaviour
 {
-    public LevelManager lm;
-    public LevelUI parent;
+    [SerializeField]
+    private LevelManager levelManager;
+
     public GameObject LevelCompleteUI; //Level Comple Window
     public GameObject LevelCoinCount; //top hud element
     public GameObject LevelStarCount; //top hud element
@@ -15,7 +16,7 @@ public class LevelComplete : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            lm.AddCoinsOnCompletion(); //LevelComplete : LevelUI : SceneBoss
+            levelManager.AddCoinsOnCompletion(); //LevelComplete : LevelUI : SceneBoss
             Time.timeScale = 0f;
             pauseButton.SetActive(false);
             LevelCompleteUI.SetActive(true);

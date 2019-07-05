@@ -7,10 +7,7 @@ public class Move : MonoBehaviour
     public Animator animator;
     public Rigidbody2D rb;
 
-    public bool isDead;
-
-    public LayerMask whatIsGround = 1<<8;
-    public float groundCheckRadius = 0f;
+    public bool IsDead;
 
     public void MoveRight()
     {
@@ -19,13 +16,13 @@ public class Move : MonoBehaviour
 
     public void Update()
     {
-        animator.SetBool("Dead", isDead);
+        animator.SetBool("Dead", IsDead);
         animator.SetFloat("Speed", rb.velocity.x);
     }
 
     public void MoveLeft()
     {
-        if (isDead == false)
+        if (IsDead == false)
         {
             if (LevelManager.ScreenTap >= 1) //enemies starting to move only if player tapped
             {
@@ -44,7 +41,7 @@ public class Move : MonoBehaviour
 
     public void MoveLeftSlow()
     {
-        if (isDead == false)
+        if (IsDead == false)
         {
             if (LevelManager.ScreenTap >= 1) //enemies starting to move only if player tapped
             {
@@ -59,7 +56,7 @@ public class Move : MonoBehaviour
     
     public void JumpHigh() //called High so there is no confusion with JumpFunc();
     {
-        if(isDead == true)
+        if(IsDead == true)
         {
             //
         }

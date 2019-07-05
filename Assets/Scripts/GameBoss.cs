@@ -7,10 +7,10 @@ using GooglePlayGames.BasicApi;
 
 public class GameBoss : MonoBehaviour
 {
-    public const string achievement1 = "CggItbTZvnIQAhAA"; //level completed
-    public const string achievement2 = "CggItbTZvnIQAhAD"; //three stars on any level
-    public const string achievement3 = "CggItbTZvnIQAhAE"; //stats menu found
-    public const string leaderboard = "CggItbTZvnIQAhAC";
+    public const string Achievement1 = "CggItbTZvnIQAhAA"; //level completed
+    public const string Achievement2 = "CggItbTZvnIQAhAD"; //three stars on any level
+    public const string Achievement3 = "CggItbTZvnIQAhAE"; //stats menu found
+    public const string Leaderboard = "CggItbTZvnIQAhAC";
 
     private void Start()
     {

@@ -10,8 +10,7 @@ public class LevelManager : GameBoss
     public static int LevelCoinCount;
     public static int StarCollected1, StarCollected2, StarCollected3; //check if star is collected
     static string currentScene;
-    public bool playerIsDead;
-    public string levelName = "L";
+    private string levelName = "L";
 
     private void Start()
     {
@@ -51,7 +50,7 @@ public class LevelManager : GameBoss
 
     public void StarsMerging()
     {
-        GetTheAchievement(achievement1);
+        GetTheAchievement(Achievement1);
         if (StarCollected1 == 1)
         {
             PlayerPrefs.SetInt(levelName + "S1", StarCollected1);
@@ -73,7 +72,7 @@ public class LevelManager : GameBoss
     {
         if (StarCollected1 == 1 && StarCollected2 == 1 && StarCollected3 == 1)
         {
-            GetTheAchievement(achievement2);
+            GetTheAchievement(Achievement2);
         }
     }
 }

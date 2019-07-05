@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class PlayerControls : Move
 {
-    public Transform groundCheck;
-    public bool onGround;
+    [SerializeField]
+    private bool onGround;
 
+    private float groundCheckRadius = 0f;
+
+    [SerializeField]
+    private Transform groundCheck;
+    private LayerMask whatIsGround = 1 << 8;
 
     void Start()
     {
@@ -62,7 +67,7 @@ public class PlayerControls : Move
         }
         if (collision.gameObject.tag == "DeathTag")
         {
-            isDead = true;
+            IsDead = true;
             StopMovement();
         }
     }

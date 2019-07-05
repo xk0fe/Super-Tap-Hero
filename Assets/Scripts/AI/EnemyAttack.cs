@@ -2,12 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySimple : Move
+public class EnemyAttack : Move
 {
-    public Transform groundCheck;
-
     public GameObject MainObject; //SceneBoss itself
-    public GameObject Player;
 
     void FixedUpdate()
     {
@@ -30,7 +27,7 @@ public class EnemySimple : Move
         }
         if (collision.gameObject.tag == "DeathTag")
         {
-            isDead = true;
+            IsDead = true;
             DisableGameObject();
         }
     }

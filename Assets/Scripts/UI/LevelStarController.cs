@@ -5,8 +5,7 @@ using UnityEngine.UI;
 
 public class LevelStarController : MonoBehaviour
 {
-    public LevelManager parent;
-    public string levelName = "L";
+    private string levelName = "L";
     [Header("Images")]
     public Sprite SilverStar;
     public Sprite GoldStar;

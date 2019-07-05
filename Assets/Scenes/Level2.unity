@@ -8363,13 +8363,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 604167259}
   rb: {fileID: 604167256}
-  isDead: 0
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 256
-  groundCheckRadius: 0
-  groundCheck: {fileID: 622399141}
+  IsDead: 0
   onGround: 0
+  groundCheck: {fileID: 622399141}
 --- !u!95 &604167259
 Animator:
   serializedVersion: 3
@@ -8401,7 +8397,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7be3ac69497f9143a7f74e11a163af4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parent: {fileID: 774991871}
 --- !u!1 &604932094
 GameObject:
   m_ObjectHideFlags: 0
@@ -11800,8 +11795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 456bd8f1c9577e740b5d909553648c7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lm: {fileID: 1436126078}
-  parent: {fileID: 774991871}
+  levelManager: {fileID: 1436126078}
   LevelCompleteUI: {fileID: 1851256498}
   LevelCoinCount: {fileID: 1881535011}
   LevelStarCount: {fileID: 2125035194}
@@ -12485,8 +12479,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a763589fe709324782ed3198d74972c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerIsDead: 0
-  levelName: L2
 --- !u!4 &1436126079
 Transform:
   m_ObjectHideFlags: 0
@@ -14082,7 +14074,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7be3ac69497f9143a7f74e11a163af4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parent: {fileID: 774991871}
 --- !u!114 &1802842629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14097,13 +14088,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1802842624}
   rb: {fileID: 1802842626}
-  isDead: 0
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 256
-  groundCheckRadius: 0
-  groundCheck: {fileID: 1714539063}
+  IsDead: 0
   onGround: 0
+  groundCheck: {fileID: 1714539063}
 --- !u!1 &1810541687
 GameObject:
   m_ObjectHideFlags: 0
@@ -15037,7 +15024,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7be3ac69497f9143a7f74e11a163af4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parent: {fileID: 774991871}
 --- !u!114 &1952459572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15052,13 +15038,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1952459567}
   rb: {fileID: 1952459569}
-  isDead: 0
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 256
-  groundCheckRadius: 0
-  groundCheck: {fileID: 1267008327}
+  IsDead: 0
   onGround: 0
+  groundCheck: {fileID: 1267008327}
 --- !u!1 &1971290940
 GameObject:
   m_ObjectHideFlags: 0

@@ -9558,6 +9558,7 @@ TilemapCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
 --- !u!1 &595399796
 GameObject:
   m_ObjectHideFlags: 0
@@ -12283,14 +12284,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1109060352}
   rb: {fileID: 1109060353}
-  isDead: 0
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 256
-  groundCheckRadius: 0
-  groundCheck: {fileID: 1669249301}
+  IsDead: 0
   MainObject: {fileID: 1436126077}
-  Player: {fileID: 0}
 --- !u!114 &1109060356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12781,7 +12776,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7be3ac69497f9143a7f74e11a163af4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parent: {fileID: 0}
 --- !u!114 &1188484519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12796,13 +12790,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1188484514}
   rb: {fileID: 1188484516}
-  isDead: 0
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 256
-  groundCheckRadius: 0
-  groundCheck: {fileID: 1834206388}
+  IsDead: 0
   onGround: 0
+  groundCheck: {fileID: 1834206388}
 --- !u!4 &1188484520
 Transform:
   m_ObjectHideFlags: 0
@@ -13494,8 +13484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 456bd8f1c9577e740b5d909553648c7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lm: {fileID: 1436126078}
-  parent: {fileID: 774991871}
+  levelManager: {fileID: 1436126078}
   LevelCompleteUI: {fileID: 1851256498}
   LevelCoinCount: {fileID: 1881535011}
   LevelStarCount: {fileID: 2125035194}
@@ -13926,7 +13915,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7be3ac69497f9143a7f74e11a163af4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parent: {fileID: 0}
 --- !u!114 &1406807377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13941,13 +13929,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1406807372}
   rb: {fileID: 1406807374}
-  isDead: 0
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 256
-  groundCheckRadius: 0
-  groundCheck: {fileID: 1912758497}
+  IsDead: 0
   onGround: 0
+  groundCheck: {fileID: 1912758497}
 --- !u!1 &1412315143
 GameObject:
   m_ObjectHideFlags: 0
@@ -14500,8 +14484,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a763589fe709324782ed3198d74972c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerIsDead: 0
-  levelName: L3
 --- !u!4 &1436126079
 Transform:
   m_ObjectHideFlags: 0
@@ -15624,7 +15606,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7be3ac69497f9143a7f74e11a163af4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parent: {fileID: 0}
 --- !u!114 &1663668309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15639,13 +15620,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1663668304}
   rb: {fileID: 1663668306}
-  isDead: 0
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 256
-  groundCheckRadius: 0
-  groundCheck: {fileID: 244479462}
+  IsDead: 0
   onGround: 0
+  groundCheck: {fileID: 244479462}
 --- !u!1 &1669249300
 GameObject:
   m_ObjectHideFlags: 0
@@ -16964,14 +16941,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1970344279}
   rb: {fileID: 1970344281}
-  isDead: 0
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 256
-  groundCheckRadius: 0
-  groundCheck: {fileID: 2080513570}
+  IsDead: 0
   MainObject: {fileID: 1436126077}
-  Player: {fileID: 0}
 --- !u!4 &1970344284
 Transform:
   m_ObjectHideFlags: 0
@@ -18952,6 +18923,7 @@ TilemapCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
 --- !u!1 &2125035194
 GameObject:
   m_ObjectHideFlags: 0

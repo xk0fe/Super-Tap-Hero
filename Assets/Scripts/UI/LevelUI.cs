@@ -66,7 +66,7 @@ public class LevelUI : LevelCharacterSwitch
 
     public void RestartButton()
     {
-        if (Active.GetComponent<PlayerControls>().isDead == true)
+        if (Active.GetComponent<PlayerControls>().IsDead == true)
         {
             restartButton.SetActive(true);
             pauseButton.SetActive(false);

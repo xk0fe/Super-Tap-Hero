@@ -5,10 +5,9 @@ using UnityEngine.UI;
 
 public class MenuCharacterSwitch : MonoBehaviour
 {
-    public string activeCharacter = "Gameboy"; //current ACTIVE character
-    public string selectedCharacter = "Gameboy"; //cyrrebkt VIEWING character
+    private string activeCharacter = "Gameboy"; //current ACTIVE character
+    private string selectedCharacter = "Gameboy"; //current VIEWING character in SELECTION menu
     [Header("Game objects")]
-    public RectTransform rt;
     public GameObject CurrentCharacter; //selected character image
     public GameObject btnSelect;
     public GameObject btnSelected;

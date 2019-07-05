@@ -29,7 +29,7 @@ public class ScreenMovement : GameBoss
 
     public void MoveToStats()
     {
-        GetTheAchievement(achievement3);
+        GetTheAchievement(Achievement3);
         rb.velocity = new Vector2(rb.velocity.x, -1800);
     }
 
