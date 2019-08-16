@@ -1,5 +1,7 @@
-# Simple Platformer <img src="https://github.com/xk0fe/Simple-Platformer/blob/master/Images/gameicon_small.png" height="48" width="48">
- A simple one button Unity 2D platformer using Kenney assets.
+# Super Tap Hero <img src="https://github.com/xk0fe/Simple-Platformer/blob/master/Images/gameicon_small.png" height="48" width="48">
+<img src="https://img.shields.io/badge/Unity-2019.2.0f1-green" /> <img src="https://img.shields.io/badge/stable-1.1.0-red" /> <img src="https://img.shields.io/github/repo-size/xk0fe/Super-Tap-Hero?style=social" />
+
+A simple one button Unity 2D platformer using Kenney assets.
 
 # Scripts Structure
 ![Scripts Structure](Images/ScriptStructure.png)
